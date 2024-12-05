@@ -30,7 +30,7 @@ jobs:
       id: set-var
       run: |
         echo "DOCKER_REGISTRY=yunchae02" >> $GITHUB_ENV
-        echo "DOCKER_REPOSITORY=backimg" >> $GITHUB_ENV #본인 ecr레포에 맞게 수정
+        echo "DOCKER_REPOSITORY=yunchae02/backimg" >> $GITHUB_ENV #본인 ecr레포에 맞게 수정
         echo "IMAGE_TAG=${{ github.run_number }}" >> $GITHUB_ENV
         echo "GIT_EMAIL=dkscodbs15@naver.com" >> $GITHUB_ENV
         echo "GIT_NAME=Ahnchaeyun" >> $GITHUB_ENV      
