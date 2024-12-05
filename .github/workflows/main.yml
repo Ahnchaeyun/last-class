@@ -25,16 +25,15 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}  # Docker Hub 로그인 사용자명
         password: ${{ secrets.DOCKER_PASSWORD }}
-
+        
     - name: Set Variables
       id: set-var
       run: |
-        echo "DOCKER_REGISTRY=Ahnchaeyun" >> $GITHUB_ENV
-        echo "DOCKER_REPOSITORY1=backimg" >> $GITHUB_ENV #본인 ecr레포에 맞게 수정
-        echo "DOCKER_REPOSITORY2=frontimg" >> $GITHUB_ENV #본인 ecr레포에 맞게 수정
+        echo "DOCKER_REGISTRY=yunchae02" >> $GITHUB_ENV
+        echo "DOCKER_REPOSITORY=last-app" >> $GITHUB_ENV #본인 ecr레포에 맞게 수정
         echo "IMAGE_TAG=${{ github.run_number }}" >> $GITHUB_ENV
         echo "GIT_EMAIL=dkscodbs15@naver.com" >> $GITHUB_ENV
-        echo "GIT_NAME=Ahnchaeyun" >> $GITHUB_ENV
+        echo "GIT_NAME=Ahnchaeyun" >> $GITHUB_ENV      
    
     - name: Docker Image Build
       id: build-image
