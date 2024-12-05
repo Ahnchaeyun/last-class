@@ -23,8 +23,8 @@ jobs:
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
       with:
-        username: ${{ secrets.yunchae02 }}  # Docker Hub 로그인 사용자명
-        password: ${{ secrets.dks1223232! }}
+        username: ${{ secrets.DOCKER_USERNAME }}  # Docker Hub 로그인 사용자명
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Set Variables
       id: set-var
@@ -49,7 +49,7 @@ jobs:
     - name: Checkout Deployment Repository
       uses: actions/checkout@v4
       with:
-        repository: Ahnchaeyun/last_deploy #본인에 맞게 수정
+        repository: Ahnchaeyun/last-deploy #본인에 맞게 수정
         ref: main  # branch
         token: ${{ secrets.GH_TOKEN }}
         
