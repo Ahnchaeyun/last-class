@@ -49,7 +49,7 @@ jobs:
     - name: Checkout Deployment Repository
       uses: actions/checkout@v4
       with:
-        repository: Ahnchaeyun/last-delploy #본인에 맞게 수정
+        repository: Ahnchaeyun/last-deploy #본인에 맞게 수정
         ref: main  # branch
         token: ${{ secrets.GH_TOKEN }}
         
